@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+a  {
+    @include link(#000, red, blue, green);
+}
+    
+
+
+
+.block:not(.first){
+   
+    height: 200px;
+    margin-bottom: 20px;
+    width: $blockWidth;
+}
+
+.first{
+   
+    height: 100px;
+    margin-bottom: 20px;
+}
+#central-block{
+    padding: 30px;
+
+    ul{
+        list-style: none;
+        display: inline-block;
+        
+    }
+    li { 
+        float: left;
+        margin-right: 10px;
+
+        a{
+        // color: $color;
+        // color: $color;
+        @include font ($color, light); 
+        
+        &:hover{
+            color: red;
+        }
+    }
+    }
+
+    a{
+        @include font(green, light);
+    
+    }
+}
